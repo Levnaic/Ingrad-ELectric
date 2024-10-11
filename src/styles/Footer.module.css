@@ -1,0 +1,4 @@
+.footerBody {
+  background-color: var(--primary-color);
+  min-height: 400px;
+}

@@ -1,0 +1,17 @@
+.headerBody {
+  padding: 15px 10px;
+  background-color: var(--primary-color);
+}
+
+.headerListContainer {
+  display: flex;
+  list-style-type: none;
+  gap: 5%;
+}
+
+.hederListElement {
+  font-size: 1.3rem;
+  font-weight: 100;
+  cursor: pointer;
+  color: var(--background-color);
+}
