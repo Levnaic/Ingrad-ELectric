@@ -30,9 +30,7 @@ p {
 
 a {
   all: unset;
-  color: var(--primary-color);
   cursor: pointer;
-  font-size: 1rem;
 }
 
 li {
