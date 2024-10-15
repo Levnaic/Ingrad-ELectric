@@ -3,17 +3,21 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { Link } from "react-router-dom";
 
 // icons
 import HomeIcon from "@mui/icons-material/Home";
 
-const navText = ["Početna", "O nama", "Usluge", "Proizvodi"];
-const navIcons = [<HomeIcon />];
+const navItems = [
+  { text: "Početna", to: "/" },
+  { text: "O nama", to: "/o_nama" },
+  { text: "Usluge", to: "/usluge" },
+  { text: "Proizvodi", to: "/proizvodi" },
+];
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -25,11 +29,19 @@ export default function TemporaryDrawer() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {navText.map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{navIcons[index]}</ListItemIcon>
-              <ListItemText primary={text} />
+        {navItems.map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton
+              component={Link}
+              to={item.to}
+              onClick={toggleDrawer(false)}
+            >
+              <ListItemIcon>
+                {item.text === "Početna" && <HomeIcon />}{" "}
+                {/* Conditional rendering of icons */}
+                {/* Add other icons based on the item if needed */}
+              </ListItemIcon>
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
