@@ -3,31 +3,13 @@ import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-
-function samePageLinkNavigation(event) {
-  if (
-    event.defaultPrevented ||
-    event.button !== 0 || // ignore everything but left-click
-    event.metaKey ||
-    event.ctrlKey ||
-    event.altKey ||
-    event.shiftKey
-  ) {
-    return false;
-  }
-  return true;
-}
+import { Link } from "react-router-dom";
 
 function LinkTab(props) {
   return (
     <Tab
-      component="a"
-      onClick={(event) => {
-        // Routing libraries handle this, you can remove the onClick handle when using them.
-        if (samePageLinkNavigation(event)) {
-          event.preventDefault();
-        }
-      }}
+      component={Link}
+      to={props.to}
       aria-current={props.selected && "page"}
       {...props}
     />
@@ -42,13 +24,7 @@ export default function NavTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    // event.type can be equal to focus with selectionFollowsFocus.
-    if (
-      event.type !== "click" ||
-      (event.type === "click" && samePageLinkNavigation(event))
-    ) {
-      setValue(newValue);
-    }
+    setValue(newValue);
   };
 
   return (
@@ -59,9 +35,10 @@ export default function NavTabs() {
         aria-label="nav tabs example"
         role="navigation"
       >
-        <LinkTab label="Page One" href="/" />
-        <LinkTab label="Page Two" href="/o_nama" />
-        <LinkTab label="Page Three" href="/spam" />
+        <LinkTab label="Početna" to="/" />
+        <LinkTab label="O nama" to="/o_nama" />
+        <LinkTab label="Usluge" to="/usluge" />
+        <LinkTab label="Proizvodi" to="/proizvodi" />
       </Tabs>
     </Box>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Header";
-import CustomDrawer from "./CustomDrawer";
+import HeaderPhone from "./HeaderPhone";
 import Footer from "./Footer";
-import { Container, useTheme, useMediaQuery } from "@mui/material";
+import { Container, useTheme, useMediaQuery, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Layout = ({ children }) => {
@@ -16,13 +16,20 @@ const Layout = ({ children }) => {
     { text: "Proizvodi", component: Link, to: "proizvodi" },
   ];
   return (
-    <div>
-      {isMobile ? <CustomDrawer drawerItems={drawerItems} /> : <Header />}
-      <Container sx={{ bgcolor: theme.palette.primary.main, height: "100vh" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        bgcolor: theme.palette.background.default,
+      }}
+    >
+      {isMobile ? <HeaderPhone drawerItems={drawerItems} /> : <Header />}
+      <Container sx={{ flexGrow: 1, my: 10, py: 2, border: "1px solid black" }}>
         <main>{children}</main>
       </Container>
       <Footer />
-    </div>
+    </Box>
   );
 };
 

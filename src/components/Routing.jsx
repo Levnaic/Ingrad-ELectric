@@ -12,7 +12,6 @@ const Routing = () => {
       <Route path="/o_nama" element={<About />} />
       <Route path="/usluge" element={<Services />} />
       <Route path="/proizvodi" element={<Products />} />
-      <Route path="/usluge" element={<Services />} />
     </Routes>
   );
 };

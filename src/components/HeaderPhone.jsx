@@ -38,8 +38,6 @@ export default function TemporaryDrawer() {
             >
               <ListItemIcon>
                 {item.text === "Početna" && <HomeIcon />}{" "}
-                {/* Conditional rendering of icons */}
-                {/* Add other icons based on the item if needed */}
               </ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
