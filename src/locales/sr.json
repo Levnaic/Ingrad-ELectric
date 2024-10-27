@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "/": "Početna",
+    "/o_nama": "O nama",
+    "/usluge": "Usluge",
+    "/portfolio": "Portfolio"
+  },
+  "home": {
+    "title": "Ingrad Electric",
+    "content": "Lorem ipsumSR"
+  }
+}

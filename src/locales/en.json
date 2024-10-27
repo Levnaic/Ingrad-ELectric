@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "/": "Home",
+    "/o_nama": "About us",
+    "/usluge": "Services",
+    "/portfolio": "Portfolio"
+  },
+  "home": {
+    "title": "Ingrad Electric",
+    "content": "Lorem ipsumEN"
+  }
+}
