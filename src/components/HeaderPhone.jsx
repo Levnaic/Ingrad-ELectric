@@ -8,6 +8,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
 
 // icons
 import HomeIcon from "@mui/icons-material/Home";
@@ -49,7 +50,9 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Open drawer</Button>
+      <Button onClick={toggleDrawer(true)}>
+        <MenuIcon />
+      </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

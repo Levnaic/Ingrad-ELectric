@@ -43,22 +43,40 @@ export default function NavTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingRight: "15px",
+      }}
+    >
       <Tabs value={currentTabValue} aria-label="nav tabs" role="navigation">
         {Object.entries(navItems).map(([path, label], index) => (
           <LinkTab key={index} label={label} to={path} />
         ))}
       </Tabs>
-      <Box sx={{ marginTop: 2, display: "flex", justifyContent: "flex-end" }}>
-        <Button
-          variant="outlined"
-          onClick={() => handleChangeLanguage("en")}
-          sx={{ marginRight: 1 }}
-        >
-          English
+      <Box sx={{}}>
+        <Button onClick={() => handleChangeLanguage("sr")}>
+          <ReactCountryFlag
+            countryCode="RS"
+            svg
+            style={{
+              width: "40px",
+              height: "28px",
+            }}
+          />
         </Button>
-        <Button variant="outlined" onClick={() => handleChangeLanguage("sr")}>
-          Srpski
+        <Button onClick={() => handleChangeLanguage("en")}>
+          <ReactCountryFlag
+            countryCode="US"
+            svg
+            style={{
+              width: "40px",
+              height: "28px",
+            }}
+          />
         </Button>
       </Box>
     </Box>

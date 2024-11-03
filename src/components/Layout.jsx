@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       }}
     >
       {isMobile ? <HeaderPhone drawerItems={drawerItems} /> : <Header />}
-      <Container sx={{ flexGrow: 1, my: 10, py: 2, border: "1px solid black" }}>
+      <Container sx={{ flexGrow: 1, my: 0, py: 5, border: "1px solid black" }}>
         <main>{children}</main>
       </Container>
       <Footer />
