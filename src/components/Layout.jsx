@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import HeaderPhone from "./HeaderPhone";
+import Header from "./Header/Header";
+import HeaderPhone from "./Header/HeaderPhone";
 import Footer from "./Footer";
 import { Container, useTheme, useMediaQuery, Box } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       }}
     >
       {isMobile ? <HeaderPhone drawerItems={drawerItems} /> : <Header />}
-      <Container sx={{ flexGrow: 1, my: 0, py: 5, border: "1px solid black" }}>
+      <Container sx={{ flexGrow: 1, my: 0, py: 5, border: "1px solid red" }}>
         <main>{children}</main>
       </Container>
       <Footer />

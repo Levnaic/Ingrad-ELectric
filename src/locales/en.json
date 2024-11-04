@@ -1,12 +1,21 @@
 {
   "nav": {
     "/": "Home",
-    "/o_nama": "About us",
+    "/o_nama": "About Us",
     "/usluge": "Services",
     "/portfolio": "Portfolio"
   },
   "home": {
-    "title": "Ingrad Electric",
-    "content": "Lorem ipsumEN"
+    "title": "Your Trusted Partner for Electrical and IT Solutions",
+    "subtitle": "We offer high-quality services in electrical work, cabinet wiring, and PLC programming",
+    "cta": "Learn more about our services"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "shortDescription": "We are a skilled service company with years of experience in electrical work and industrial automation. Our team consists of experts dedicated to providing the highest level of service, from cabinet design and wiring to advanced web solutions development.",
+    "mainSkills": "Professionalism, reliability, and innovation."
+  },
+  "services": {
+    "title": "Our Services"
   }
 }

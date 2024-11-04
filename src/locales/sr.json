@@ -6,7 +6,16 @@
     "/portfolio": "Portfolio"
   },
   "home": {
-    "title": "Ingrad Electric",
-    "content": "Lorem ipsumSR"
+    "title": "Vaš pouzdan partner za elektro i IT rešenja",
+    "subtitle": "Nudimo visokokvalitetne usluge u elektro poslovima, šemiranju ormara i programiranju PLC-ova",
+    "cta": "Saznajte više o našim uslugama"
+  },
+  "aboutUs": {
+    "title": "O nama",
+    "shortDescription": "Mi smo zanatsko-uslužna firma sa dugogodišnjim iskustvom u oblasti elektro poslova i industrijske automatizacije. Naš tim sastoji se od stručnjaka sa znanjem i posvećenošću da pruže najviši nivo usluga, od projektovanja i šemiranja ormara do razvoja naprednih web rešenja.",
+    "mainSkils": "Profesionalnost, pouzdanost, i inovativnost.”"
+  },
+  "services": {
+    "title": "Naše usluge"
   }
 }
