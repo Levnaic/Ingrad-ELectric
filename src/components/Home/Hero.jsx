@@ -1,16 +1,27 @@
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import CTABtn from "../Btns/CTABtn";
+import { useTheme } from "@mui/material/styles";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
 
-  const handleCtaClick = () => {};
+  // Get primary color and create rgba
+  const overlayColor = `rgba(${parseInt(
+    theme.palette.primary.main.slice(1, 3),
+    16
+  )}, ${parseInt(theme.palette.primary.main.slice(3, 5), 16)}, ${parseInt(
+    theme.palette.primary.main.slice(5, 7),
+    16
+  )}, 0.8)`;
+
   return (
     <Box
       sx={{
         display: "flex",
-        minHeight: "60vh",
+        minHeight: "100vh",
         backgroundImage: "url(/assets/images/hero-plh.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -22,7 +33,7 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(127,161,195, 0.8)", // Semi-transparent overlay
+          backgroundColor: overlayColor,
           zIndex: 1,
         },
       }}
@@ -41,18 +52,7 @@ const Hero = () => {
       >
         {t("home.title")}
       </Typography>
-      <Button
-        onClick={() => handleCtaClick()}
-        sx={{
-          border: "1px solid black",
-          position: "absolute",
-          backgroundColor: "black",
-          zIndex: "2",
-          color: "white",
-        }}
-      >
-        {t("home.cta")}
-      </Button>
+      <CTABtn link="/o_nama" text={t("home.cta")} />
     </Box>
   );
 };
