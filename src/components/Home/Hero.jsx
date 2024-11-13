@@ -50,9 +50,18 @@ const Hero = () => {
           alignItems: "center",
         }}
       >
-        {t("home.title")}
+        {t("home.hero.title")}
       </Typography>
-      <CTABtn link="/o_nama" text={t("home.cta")} />
+      <Box
+        sx={{
+          position: "absolute",
+          top: "70%",
+          left: "70%",
+          zIndex: "2",
+        }}
+      >
+        <CTABtn link="/o_nama" text={t("home.hero.cta")} />
+      </Box>
     </Box>
   );
 };

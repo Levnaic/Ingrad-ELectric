@@ -2,8 +2,10 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
 
 const CTABtn = (props) => {
+  const { t } = useTranslation();
   const theme = useTheme();
   return (
     <Button
@@ -13,15 +15,11 @@ const CTABtn = (props) => {
         padding: "10px 25px",
         height: "60px",
         border: "1px solid black",
-        position: "absolute",
-        top: "70%",
-        left: "70%",
         backgroundColor: props.backgroundColor || theme.palette.secondary.main,
         color: props.color || theme.palette.text.primary,
-        zIndex: "2",
       }}
     >
-      {props.text}
+      {props.text || t("utils.cta")}
     </Button>
   );
 };

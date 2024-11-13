@@ -6,9 +6,14 @@
     "/portfolio": "Portfolio"
   },
   "home": {
-    "title": "Your Trusted Partner for Electrical and IT Solutions",
-    "subtitle": "We offer high-quality services in electrical work, cabinet wiring, and PLC programming",
-    "cta": "Learn more about our services"
+    "hero": {
+      "title": "Your Trusted Partner for Electrical and IT Solutions",
+      "subtitle": "We offer high-quality services in electrical work, cabinet wiring, and PLC programming",
+      "cta": "Learn more about our services"
+    },
+    "services": {
+      "title": "Our services"
+    }
   },
   "aboutUs": {
     "title": "About Us",
@@ -17,5 +22,8 @@
   },
   "services": {
     "title": "Our Services"
+  },
+  "utils": {
+    "cta": "Click to find out more"
   }
 }

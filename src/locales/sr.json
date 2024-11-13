@@ -6,9 +6,41 @@
     "/portfolio": "Portfolio"
   },
   "home": {
-    "title": "Vaš pouzdan partner za elektro i IT rešenja",
-    "subtitle": "Nudimo visokokvalitetne usluge u elektro poslovima, šemiranju ormara i programiranju PLC-ova",
-    "cta": "Saznajte više o našim uslugama"
+    "hero": {
+      "title": "Vaš pouzdan partner za elektro i IT rešenja",
+      "subtitle": "Nudimo visokokvalitetne usluge u elektro poslovima, šemiranju ormara i programiranju PLC-ova",
+      "cta": "Saznajte više o našim uslugama"
+    },
+    "services": {
+      "title": "Naše usluge",
+      "cards": [
+        {
+          "title": "Usluga 1",
+          "text": "Opis prve usluge koju pružamo, uključujući detalje o tome šta ta usluga obuhvata.",
+          "imageUrl": "/assets/images/service1.jpg"
+        },
+        {
+          "title": "Usluga 2",
+          "text": "Opis druge usluge, sa fokusom na ključne aspekte i prednosti za klijenta.",
+          "imageUrl": "/assets/images/service2.jpg"
+        },
+        {
+          "title": "Usluga 3",
+          "text": "Treća usluga sa detaljima o tome kako može pomoći korisnicima u industriji.",
+          "imageUrl": "/assets/images/service3.jpg"
+        },
+        {
+          "title": "Usluga 4",
+          "text": "Treća usluga sa detaljima o tome kako može pomoći korisnicima u industriji.",
+          "imageUrl": "/assets/images/service3.jpg"
+        },
+        {
+          "title": "Usluga 5",
+          "text": "Treća usluga sa detaljima o tome kako može pomoći korisnicima u industriji.",
+          "imageUrl": "/assets/images/service3.jpg"
+        }
+      ]
+    }
   },
   "aboutUs": {
     "title": "O nama",
@@ -17,5 +49,8 @@
   },
   "services": {
     "title": "Naše usluge"
+  },
+  "utils": {
+    "cta": "Klikni da saznaš više"
   }
 }

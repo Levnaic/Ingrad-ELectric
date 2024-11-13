@@ -21,6 +21,7 @@ const theme = createTheme({
     },
     text: {
       primary: "#333333",
+      grey: "#818181",
     },
   },
   typography: {
@@ -70,7 +71,7 @@ const theme = createTheme({
           margin: 0,
           padding: 0,
           boxSizing: "border-box",
-          backgroundColor: "#f5eded", // --background-color
+          backgroundColor: "#CDE0DA", // --background-color
           fontSize: "16px", // --font-size-desktop
         },
         a: {
